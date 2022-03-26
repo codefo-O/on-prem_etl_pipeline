@@ -27,7 +27,6 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#Deployment">Deployment</a></li>
@@ -68,16 +67,11 @@ Step 6: Visualize data using Superset
 * [Docker](https://www.docker.com/)
 * [Drill](https://drill.apache.org/)
 * [Postgres](https://www.postgresql.org/)
+* [PySpark](https://pypi.org/project/pyspark/)
 * [Spark](https://spark.apache.org/)
 * [Superset](https://superset.apache.org/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an POC ETL pipeline to transform data from a csv/json file and output to parquet files, the data can then visualized for analysis.
 
 ### Prerequisites
 
