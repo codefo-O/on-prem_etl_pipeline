@@ -10,9 +10,9 @@
 <h3 align="center">ETL Pipeline</h3>
 
   <p align="center">
-    A project to create an ETL Pipeline to import data from a CSV/JSON file, transform, saves as parquet and visualize for analysis.
+    A proof of concept project to create an ETL pipeline to ingest data from a CSV/JSON file, transform, saves as parquet and visualize for analysis.
     <br />
-    <a href="https://github.com/codefo-O/on_prem_etl_pipeline">View Demo</a>
+    <a href="https://github.com/codefo-O/on_prem_etl_pipeline">View Youtube Demo </a>
   </p>
 </div>
 
@@ -30,7 +30,7 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#Deployment">Deployment</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -47,19 +47,17 @@
 
 The workflow for the project as per the diagram above and steps below.
 
-Step 1: User generates file and copies to a folder
+Step 1: User generates file and uploads to incoming folder
 
-Step 2: Monitor folder using inotify-tools for new files
+Step 2: Monitor incoming folder using inotify-tools and trigger Airflow Dag
 
-Step 3: Trigger Airflow Dag using inotify-tools
+Step 3: Airflow Dag runs Spark job
 
-Step 4: Airflow triggers Spark-Submit 
+Step 4: Spark generates parquet files directly to the filesystem
 
-Step 5: Spark outputs as parquet files to filesystem
+Step 5: Query filesystem using Drill
 
-Step 6: Query filesystem using Drill
-
-Step 7: Visualize data using Superset
+Step 6: Visualize data using Superset
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -76,7 +74,6 @@ Step 7: Visualize data using Superset
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -89,7 +86,7 @@ This project can be ran on any server able to run Docker containers and inotify-
 * [Docker](https://www.docker.com/)
 * [inotify-tools](https://docs.fedoraproject.org/en-US/epel/)
 
-### Deployment and Configuration
+### Deployment
 
 To deploy the etl_pipline solution please follow the steps below
 1. Clone the repo
@@ -154,7 +151,7 @@ To deploy the etl_pipline solution please follow the steps below
    ```sh
    docker exec -it superset superset init
    ```
-12. Start monoitor for files in /data/incoming
+12. Start monitor for files in /data/incoming
    ```sh
    cd data
    ./monitor_incoming.sh
@@ -189,6 +186,3 @@ Distributed under the Apache 2.0 License. See `LICENSE.txt` for more information
 Gurjot Singh - GurjotSingh@rogers.com
 
 Project Link: [https://github.com/codefo-O/on-prem_etl_pipeline](https://github.com/codefo-O/on-prem_etl_pipeline)
-
-
-
