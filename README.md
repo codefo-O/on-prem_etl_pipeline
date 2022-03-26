@@ -88,23 +88,23 @@ This project can be ran on any server able to run Docker containers and inotify-
 
 ### Deployment
 
-To deploy the etl_pipline solution please follow the steps below
-1. Clone the repo
+To deploy the etl_pipline solution please follow the steps below.
+1. Clone the repo.
    ```sh
    git clone https://github.com/codefo-O/on_prem_etl_pipeline.git
    ```
-2. Change into the work directory
+2. Change into the work directory.
    ```sh
    cd on_prem_etl_pipeline
    ```
-3. Start the Postgres container
+3. Start the Postgres container.
    ```sh
    docker run -dit --name postgres \
                            -e POSTGRES_USER=airflow \
                            -e POSTGRES_PASSWORD=airflow \
                            -e POSTGRES_DB=airflow postgres:latest
    ```
-4. Start the Apache Airflow & Apache Spark container 
+4. Start the Apache Airflow & Apache Spark container.
    ```sh
    docker run -dit --name airflow \
                             -v ${PWD}/dags:/usr/local/airflow/dags \
@@ -112,7 +112,7 @@ To deploy the etl_pipline solution please follow the steps below
                             -v ${PWD}/scripts:/scripts --link postgres:postgres \
                             -p 8080:8080 codefoo/airflow-spark webserver
    ```
-5. Add Admin user to Apache Airflow
+5. Add Admin user to Apache Airflow.
    ```sh
    docker exec -it airflow airflow users create \
                                           --role Admin \
@@ -122,36 +122,36 @@ To deploy the etl_pipline solution please follow the steps below
                                           --lastname admin \
                                           --password admin
    ```
-6. Update Apache Airflow database
+6. Update Apache Airflow database.
    ```sh
    docker exec -it airflow airflow db upgrade
    ```
-7. Start Apache Airflow scheduler for the first time
+7. Start Apache Airflow scheduler for the first time.
    ```sh
    docker exec -dit airflow airflow scheduler
    ```
-8. Start the Apache Drill container 
+8. Start the Apache Drill container.
    ```sh
    docker run -dit --name drill -v ${PWD}/data:/data -p 8047:8047 apache/drill:latest
    ```
-9. Start the Apache Superset container 
+9. Start the Apache Superset container.
    ```sh
    docker run -dit --name superset -p 8088:8088 codefoo/superset-sqlalchemy:latest
    ```
-10. Add Admin user to Apache Superset 
-   ```sh
-   docker exec -it superset superset fab create-admin \
-                                          --username admin \
-                                          --firstname Superset \
-                                          --lastname Admin \
-                                          --email admin@superset.com \
-                                          --password admin
-   ```
-11. Update Apache Superset database
+10. Add Admin user to Apache Superset. 
+    ```sh
+    docker exec -it superset superset fab create-admin \
+                                           --username admin \
+                                           --firstname Superset \
+                                           --lastname Admin \
+                                           --email admin@superset.com \
+                                           --password admin
+    ```
+11. Update Apache Superset database.
    ```sh
    docker exec -it superset superset init
    ```
-12. Start monitor for files in /data/incoming
+12. Start monitor for files in /data/incoming.
    ```sh
    cd data
    ./monitor_incoming.sh
