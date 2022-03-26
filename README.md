@@ -142,14 +142,14 @@ To deploy the etl_pipline solution please follow the steps below.
                                            --password admin
     ```
 11. Update Apache Superset database.
-   ```sh
-   docker exec -it superset superset init
-   ```
+    ```sh
+    docker exec -it superset superset init
+    ```
 12. Start monitor for files in /data/incoming.
-   ```sh
-   cd data
-   ./monitor_incoming.sh
-   ```
+    ```sh
+    cd data
+    ./monitor_incoming.sh
+    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
