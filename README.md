@@ -27,6 +27,7 @@
       </ul>
     </li>
     <li>
+     <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#Deployment">Deployment</a></li>
@@ -37,7 +38,6 @@
     <li><a href="#contact">Contact</a></li>
     </ol>
 </details>
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -57,7 +57,6 @@ Step 4: Spark generates parquet files directly to the filesystem
 Step 5: Query filesystem using Drill
 
 Step 6: Visualize data using Superset
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
