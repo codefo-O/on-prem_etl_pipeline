@@ -63,6 +63,7 @@ Step 6: Visualize data using Superset
 
 ### Built With
 * [Airflow](https://airflow.apache.org/)
+* [Bash](https://www.gnu.org/software/bash/)
 * [Docker](https://www.docker.com/)
 * [Drill](https://drill.apache.org/)
 * [Postgres](https://www.postgresql.org/)
