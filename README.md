@@ -47,9 +47,13 @@
 The workflow for the project as per the diagram above and steps below.
 
 Step 1: User generates file and uploads to incoming folder
+
 Step 2: Monitor incoming folder using inotify-tools and trigger Airflow Dag
+
 Step 3: Airflow Dag runs Spark job
+
 Step 4: Spark generates parquet files directly to the filesystem
+
 Step 5: Query filesystem using Drill
 Step 6: Visualize data using Superset
 
