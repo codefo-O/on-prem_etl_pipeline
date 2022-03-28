@@ -44,7 +44,7 @@
 
 <img src="images/diagram.png">
 
-The workflow for the project as per the diagram above and steps below.
+The workflow for the project.
 
 Step 1: User generates file and copies to a folder
 
