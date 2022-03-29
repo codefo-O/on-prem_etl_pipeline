@@ -2,3 +2,9 @@ __pycache__
 failed/*
 output/*
 processed/*
+incoming/*
+
+!incoming/.gitkeep
+!failed/.gitkeep
+!output/.gitkeep
+!processed/.gitkeep
