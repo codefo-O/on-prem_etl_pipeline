@@ -151,11 +151,7 @@ To deploy the etl_pipline solution please follow the steps below.
     ```sh
     docker exec -it superset superset init
     ```
-12. Start monitor for files in /data/incoming.
-    ```sh
-    cd data
-    ./monitor_incoming.sh
-    ```
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -163,11 +159,22 @@ To deploy the etl_pipline solution please follow the steps below.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Once you have completed all the steps above and started monitor incoming you can test by copying one of the test files in the data folder.
- ```sh
-   cp *_Records.csv incoming/ 
- ```
-The procssed files will be moved to /data/processed and failed will be moved to /data/failed
+Once you have deployed all the containers and confirmed everything is working you can test the pipeline by doing the steps below.
+1. Start inotify-tools monitoring script
+    ```sh
+    cd data
+    ./monitor_incoming.sh
+    ```
+2. Copy files into /data/incoming.
+    ```sh
+    cp filename incoming/ 
+    example: cp 100_Records.csv incoming/
+    ```
+3. To test a invalid file.
+    ```sh
+    cp failcheck.txt incoming/ 
+    example: cp 100_Records.csv incoming/
+    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -183,7 +190,7 @@ Distributed under the Apache 2.0 License. See `LICENSE.txt` for more information
 <!-- CONTACT -->
 ## Contact
 
-Gurjot Singh - GurjotSingh@rogers.com
+Gurjot Singh - GurjotSinghJheeta@Gmail.com
 
 Project Link: [https://github.com/codefo-O/on-prem_etl_pipeline](https://github.com/codefo-O/on-prem_etl_pipeline)
 
