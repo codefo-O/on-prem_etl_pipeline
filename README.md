@@ -173,7 +173,6 @@ Once you have deployed all the containers and confirmed everything is working yo
 3. To test a invalid file.
     ```sh
     cp failcheck.txt incoming/ 
-    example: cp 100_Records.csv incoming/
     ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
