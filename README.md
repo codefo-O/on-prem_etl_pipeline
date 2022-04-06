@@ -12,7 +12,7 @@
   <p align="center">
     A proof of concept project to create an ETL pipeline to ingest data from a csv file, transform, save as parquet and visualize for analysis.
     <br />
-    <a href="https://youtu.be/UjbsdNwvLg0">View Presentation Video</a>
+    <a href="https://youtu.be/nRWt4tdwIqk">View Presentation Video</a>
   </p>
 </div>
 
@@ -191,6 +191,6 @@ Distributed under the Apache 2.0 License. See `LICENSE.txt` for more information
 
 Gurjot Singh - GurjotSinghJheeta@gmail.com
 
-Project Link: [https://github.com/codefo-O/on-prem_etl_pipeline](https://github.com/codefo-O/on-prem_etl_pipeline)
 
-View Presentation Video: [https://youtu.be/UjbsdNwvLg0](https://youtu.be/UjbsdNwvLg0)
+
+
