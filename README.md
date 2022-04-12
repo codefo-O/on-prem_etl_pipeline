@@ -10,9 +10,8 @@
 <h3 align="center">ETL Pipeline</h3>
 
   <p align="center">
-    A proof of concept project to create an ETL pipeline to ingest data from a csv file, transform, save as parquet and visualize for analysis.
+    A proof of concept project to create an ETL pipeline to ingest data from a source, transform, save as parquet and visualize for analysis.
     <br />
-    <a href="https://youtu.be/nRWt4tdwIqk">View Presentation Video</a>
   </p>
 </div>
 
