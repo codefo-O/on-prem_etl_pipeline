@@ -70,7 +70,6 @@ Step 7: Visualize data using Superset
 * [PySpark](https://pypi.org/project/pyspark/)
 * [Spark](https://spark.apache.org/)
 * [Superset](https://superset.apache.org/)
-* [Shell]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
