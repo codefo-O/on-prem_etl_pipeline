@@ -64,13 +64,13 @@ Step 7: Visualize data using Superset
 
 ### Built With
 * [Airflow](https://airflow.apache.org/)
-* [Bash](https://www.gnu.org/software/bash/)
 * [Docker](https://www.docker.com/)
 * [Drill](https://drill.apache.org/)
 * [Postgres](https://www.postgresql.org/)
 * [PySpark](https://pypi.org/project/pyspark/)
 * [Spark](https://spark.apache.org/)
 * [Superset](https://superset.apache.org/)
+* [Shell]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
